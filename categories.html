@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRide - Electric Scooters Catalog</title>
     <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -32,17 +33,85 @@
         </button>
     </header>
 
-    <main class="container page-padding">
+    <div class="catalog-layout">
+        <aside class="category-sidebar" aria-label="Product category filter">
+            <h2 class="sidebar-title">Category</h2>
+            <div class="cat-menu">
+                <div class="cat-group open">
+                    <button type="button" class="cat-toggle" data-group="all" aria-expanded="true" aria-controls="sub-all">
+                        <i class="fas fa-briefcase cat-icon" aria-hidden="true"></i>
+                        <span class="cat-label">All Product</span>
+                        <span class="cat-badge" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-down cat-chevron" aria-hidden="true"></i>
+                    </button>
+                    <ul class="cat-sub" id="sub-all">
+                        <li><button type="button" class="cat-link" data-group="all" data-series="urban-commuter"><i class="fas fa-city" aria-hidden="true"></i><span>Urban Commuter</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="all" data-series="high-performance"><i class="fas fa-bolt" aria-hidden="true"></i><span>High Performance</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="all" data-series="cargo-delivery"><i class="fas fa-box" aria-hidden="true"></i><span>Cargo &amp; Delivery</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="all" data-series="ultra-portable"><i class="fas fa-feather" aria-hidden="true"></i><span>Ultra-Portable</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="all" data-series="enterprise-fleet"><i class="fas fa-building" aria-hidden="true"></i><span>Enterprise Fleet</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                    </ul>
+                </div>
+                <div class="cat-group">
+                    <button type="button" class="cat-toggle" data-group="new" aria-expanded="false" aria-controls="sub-new">
+                        <i class="fas fa-wand-magic-sparkles cat-icon" aria-hidden="true"></i>
+                        <span class="cat-label">New Arrival</span>
+                        <span class="cat-badge" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-down cat-chevron" aria-hidden="true"></i>
+                    </button>
+                    <ul class="cat-sub" id="sub-new">
+                        <li><button type="button" class="cat-link" data-group="new" data-series="urban-commuter"><i class="fas fa-city" aria-hidden="true"></i><span>Urban Commuter</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="new" data-series="high-performance"><i class="fas fa-bolt" aria-hidden="true"></i><span>High Performance</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="new" data-series="cargo-delivery"><i class="fas fa-box" aria-hidden="true"></i><span>Cargo &amp; Delivery</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="new" data-series="ultra-portable"><i class="fas fa-feather" aria-hidden="true"></i><span>Ultra-Portable</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="new" data-series="enterprise-fleet"><i class="fas fa-building" aria-hidden="true"></i><span>Enterprise Fleet</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                    </ul>
+                </div>
+                <div class="cat-group">
+                    <button type="button" class="cat-toggle" data-group="bestseller" aria-expanded="false" aria-controls="sub-bestseller">
+                        <i class="fas fa-trophy cat-icon" aria-hidden="true"></i>
+                        <span class="cat-label">Best Seller</span>
+                        <span class="cat-badge" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-down cat-chevron" aria-hidden="true"></i>
+                    </button>
+                    <ul class="cat-sub" id="sub-bestseller">
+                        <li><button type="button" class="cat-link" data-group="bestseller" data-series="urban-commuter"><i class="fas fa-city" aria-hidden="true"></i><span>Urban Commuter</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="bestseller" data-series="high-performance"><i class="fas fa-bolt" aria-hidden="true"></i><span>High Performance</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="bestseller" data-series="cargo-delivery"><i class="fas fa-box" aria-hidden="true"></i><span>Cargo &amp; Delivery</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="bestseller" data-series="ultra-portable"><i class="fas fa-feather" aria-hidden="true"></i><span>Ultra-Portable</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="bestseller" data-series="enterprise-fleet"><i class="fas fa-building" aria-hidden="true"></i><span>Enterprise Fleet</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                    </ul>
+                </div>
+                <div class="cat-group">
+                    <button type="button" class="cat-toggle" data-group="discount" aria-expanded="false" aria-controls="sub-discount">
+                        <i class="fas fa-tag cat-icon" aria-hidden="true"></i>
+                        <span class="cat-label">On Discount</span>
+                        <span class="cat-badge" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-down cat-chevron" aria-hidden="true"></i>
+                    </button>
+                    <ul class="cat-sub" id="sub-discount">
+                        <li><button type="button" class="cat-link" data-group="discount" data-series="urban-commuter"><i class="fas fa-city" aria-hidden="true"></i><span>Urban Commuter</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="discount" data-series="high-performance"><i class="fas fa-bolt" aria-hidden="true"></i><span>High Performance</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="discount" data-series="cargo-delivery"><i class="fas fa-box" aria-hidden="true"></i><span>Cargo &amp; Delivery</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="discount" data-series="ultra-portable"><i class="fas fa-feather" aria-hidden="true"></i><span>Ultra-Portable</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                        <li><button type="button" class="cat-link" data-group="discount" data-series="enterprise-fleet"><i class="fas fa-building" aria-hidden="true"></i><span>Enterprise Fleet</span><span class="cat-count" aria-hidden="true"></span></button></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="container page-padding catalog-main">
         <div class="category-page-header">
             <h1>Transportation Product Catalogue</h1>
             <p>Explore our 5 core categories encompassing 15 high-tech smart mobility platforms.</p>
         </div>
+        <p class="result-count" id="result-count" aria-live="polite"></p>
 
         <!-- Category 1 -->
         <section id="urban-commuter" class="category-block">
             <h2 class="category-heading">1. Urban Commuter Series</h2>
             <div class="product-grid">
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="bestseller">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter1.jpeg" alt="Apex City Pro" class="product-thumb">
                     <div class="card-body">
@@ -56,7 +125,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="discount">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter2.jpeg" alt="MetroGlide Lite" class="product-thumb">
                     <div class="card-body">
@@ -70,7 +139,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="low-stock">
+                <article class="product-card" data-status="low-stock" data-tags="new">
                     <span class="stock-badge low-stock">Low Stock</span>
                     <img src="scooter3.jpeg" alt="VoltPulse Street" class="product-thumb">
                     <div class="card-body">
@@ -90,7 +159,7 @@
         <section id="high-performance" class="category-block">
             <h2 class="category-heading">2. High Performance Series</h2>
             <div class="product-grid">
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="bestseller">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter4.jpeg" alt="HyperDrive X1" class="product-thumb">
                     <div class="card-body">
@@ -104,7 +173,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="pre-order">
+                <article class="product-card" data-status="pre-order" data-tags="new">
                     <span class="stock-badge pre-order">Pre-Order</span>
                     <img src="scooter5.jpeg" alt="Apex Raptor GT" class="product-thumb">
                     <div class="card-body">
@@ -118,7 +187,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="discount">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter6.jpeg" alt="ThunderVolt Beast" class="product-thumb">
                     <div class="card-body">
@@ -138,7 +207,7 @@
         <section id="cargo-delivery" class="category-block">
             <h2 class="category-heading">3. Cargo & Delivery Series</h2>
             <div class="product-grid">
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="bestseller">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter7.jpeg" alt="FleetCarrier Heavy" class="product-thumb">
                     <div class="card-body">
@@ -152,7 +221,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="new">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter8.jpeg" alt="CargoRunner Pro" class="product-thumb">
                     <div class="card-body">
@@ -166,7 +235,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="out-of-stock">
+                <article class="product-card" data-status="out-of-stock" data-tags="discount">
                     <span class="stock-badge out-of-stock">Out of Stock</span>
                     <img src="scooter9.jpeg" alt="EcoHaul Master" class="product-thumb">
                     <div class="card-body">
@@ -186,7 +255,7 @@
         <section id="ultra-portable" class="category-block">
             <h2 class="category-heading">4. Ultra-Portable Series</h2>
             <div class="product-grid">
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="discount">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter10.jpeg" alt="PocketVolt Air" class="product-thumb">
                     <div class="card-body">
@@ -200,7 +269,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="new">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter11.jpeg" alt="NanoScooter Carbon" class="product-thumb">
                     <div class="card-body">
@@ -214,7 +283,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="bestseller">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter12.jpeg" alt="SlimGlide Go" class="product-thumb">
                     <div class="card-body">
@@ -234,7 +303,7 @@
         <section id="enterprise-fleet" class="category-block">
             <h2 class="category-heading">5. Enterprise Fleet Series</h2>
             <div class="product-grid">
-                <article class="product-card" data-status="enterprise">
+                <article class="product-card" data-status="enterprise" data-tags="discount">
                     <span class="stock-badge enterprise">Commercial Lead</span>
                     <img src="scooter13.jpeg" alt="FleetComm Commercial" class="product-thumb">
                     <div class="card-body">
@@ -248,7 +317,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="enterprise">
+                <article class="product-card" data-status="enterprise" data-tags="new">
                     <span class="stock-badge enterprise">Commercial Lead</span>
                     <img src="scooter14.jpeg" alt="UrbanShare Smart" class="product-thumb">
                     <div class="card-body">
@@ -262,7 +331,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-status="in-stock">
+                <article class="product-card" data-status="in-stock" data-tags="bestseller">
                     <span class="stock-badge in-stock">In Stock</span>
                     <img src="scooter15.jpeg" alt="PatrolPro Heavy Duty" class="product-thumb">
                     <div class="card-body">
@@ -278,6 +347,7 @@
             </div>
         </section>
     </main>
+    </div>
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -285,5 +355,6 @@
         </div>
     </footer>
     <script src="nav.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
