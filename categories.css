@@ -152,7 +152,7 @@ body {
 
 .cat-count {
     font-size: 0.75rem;
-    color: orange;
+    color: #888;
 }
 .cat-link.active .cat-count { color: orange; }
 
@@ -162,7 +162,7 @@ body {
 
 .result-count {
     margin: 0 0 18px;
-    color: orange;
+    color: #666;
     font-size: 0.9rem;
 }
 
